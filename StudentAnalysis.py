@@ -46,8 +46,10 @@ print(df)
 print(df.to_excel("StudentAna.xlsx",index = False))    #Creating a file of excel that can store this data properly row and column
                                                        #wise 
 
-File_path = r"C:\Users\HP\Abhijeet Jagtap\python\StudentAna.xlsx"     #File_path the file where excel file("StudentAna") is located
-os.startfile(File_path)           #opening file to excel format directly 
+output_path = os.path.join(os.getcwd(), "StudentAna.xlsx")
+df.to_excel(output_path, index=False)
+os.startfile(output_path)                                   #opening file to excel format directly 
+
 
 
 
